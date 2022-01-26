@@ -5,24 +5,24 @@ let str = ['','Happy', 'Birth','Day', 'OM'];
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-function playvideo(el){
+async function playvideo(el){
 	if(el==1){
 		document.getElementById("video_glow").play();
 	}
 	else if(el==0){
 		document.getElementById("video_blow").play();
+                await sleep(4000);
+	        document.getElementById("container").style.display = "none";
+                init();
+                resize();
+                requestAnimationFrame(render);
+                addEventListener('resize', resize);
 	}
 }
-async function changesrc(){
+function changesrc(){
 	document.getElementById("video_blow").style.display = "flex";
 	document.getElementById("video_glow").style.display = "none";
 	playvideo(0);
-    await sleep(4000);
-	document.getElementById("container").style.display = "none";
-    init();
-    resize();
-    requestAnimationFrame(render);
-    addEventListener('resize', resize);
 }
 function onoff(){
 	document.getElementById("video_body").style.display = "flex";
