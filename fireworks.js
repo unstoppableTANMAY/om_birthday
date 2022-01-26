@@ -1,6 +1,6 @@
 let chars, particles, canvas, ctx, w, h, current;
 let duration = 6000;
-let str = ['','Happy', 'BirthDay', 'OM'];
+let str = ['','Happy', 'Birth','Day', 'OM'];
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -17,7 +17,7 @@ async function changesrc(){
 	document.getElementById("video_blow").style.display = "flex";
 	document.getElementById("video_glow").style.display = "none";
 	playvideo(0);
-    await sleep(3000);
+    await sleep(4000);
 	document.getElementById("container").style.display = "none";
     init();
     resize();
