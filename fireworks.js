@@ -1,6 +1,6 @@
 let chars, particles, canvas, ctx, w, h, current;
 let duration = 6000;
-let str = ['','Happy', 'Birth','Day', 'OM'];
+let str = ['','Happy', 'Birth','Day', 'OM','🤍','PUJA'];
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
